@@ -1,0 +1,8 @@
+change the google map api from manifest
+
+ <meta-data android:name="com.google.android.geo.API_KEY"
+           android:value="AIzaSyDoSfDddjjhi1ks4mD4OIpv1Uu9YUdwPW8"/>
+
+CHANGE THE GOOGLE MAP API KEY FROM THE ios/Runner/AppDelegate.swift file
+
+GMSServices.provideAPIKey("AIzaSyDoSfDddjjhi1ks4mD4OIpv1Uu9YUdwPW8")
