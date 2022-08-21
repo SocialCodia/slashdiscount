@@ -19,7 +19,7 @@ class Body extends StatelessWidget {
               margin: const EdgeInsets.symmetric(horizontal: 16),
               child: Column(
                 children: [
-                   const SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   WidgetCategory(),
@@ -33,6 +33,3 @@ class Body extends StatelessWidget {
     );
   }
 }
-
-
-

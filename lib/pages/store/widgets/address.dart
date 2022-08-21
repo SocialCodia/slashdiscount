@@ -10,9 +10,10 @@ class WidgetAddress extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
     return GetBuilder<VendorController>(builder: (controller) {
       return Container(
-        height: 250,
+        height: size.height * .30,
         margin: const EdgeInsets.symmetric(horizontal: 16),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
@@ -22,18 +23,21 @@ class WidgetAddress extends StatelessWidget {
             ]),
         child: Column(children: [
           Expanded(
-            child: ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                clipBehavior: Clip.hardEdge,
-                child: GoogleMap(
-                  onMapCreated: controller.onMapCreated,
-                  markers: controller.mapMarker,
-                  initialCameraPosition: const CameraPosition(
-                      target: LatLng(19.1702813, 73.025802), zoom: 15),
-                )),
+            child: Padding(
+              padding: const EdgeInsets.all(4),
+              child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  clipBehavior: Clip.hardEdge,
+                  child: GoogleMap(
+                    onMapCreated: controller.onMapCreated,
+                    markers: controller.mapMarker,
+                    initialCameraPosition: const CameraPosition(
+                        target: LatLng(19.1702813, 73.025802), zoom: 15),
+                  )),
+            ),
           ),
           Padding(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.symmetric(vertical: 6,horizontal: 10),
               child: Text(
                   "Address : " + vendorController.vendor.address.toString())),
         ]),

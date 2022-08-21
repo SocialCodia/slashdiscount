@@ -11,9 +11,10 @@ class WidgetShopInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
     return Container(
         width: double.infinity,
-        margin: const EdgeInsets.only(top: 100, right: 20, left: 20),
+        margin: EdgeInsets.only(top: size.height * .1, right: 20, left: 20),
         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
         decoration: BoxDecoration(
             color: Colors.white,
@@ -28,13 +29,16 @@ class WidgetShopInfo extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  vendor.name.toString(),
-                  overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
-                      color: MyColor.primaryColor,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18),
+                SizedBox(
+                  width: size.width * .6,
+                  child: Text(
+                    vendor.name.toString(),
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                        color: MyColor.primaryColor,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18),
+                  ),
                 ),
                 Container(
                   decoration: BoxDecoration(
@@ -46,8 +50,8 @@ class WidgetShopInfo extends StatelessWidget {
                     borderRadius: BorderRadius.circular(50),
                     child: CachedNetworkImage(
                       fit: BoxFit.cover,
-                      height: 50,
-                      width: 50,
+                      height:  size.height * .06,
+                      width:  size.height * .06,
                       imageUrl: vendor.logo.toString(),
                       placeholder: (context, url) =>
                           Image.asset(Constants.placeHolderImage),

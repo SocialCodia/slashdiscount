@@ -14,7 +14,7 @@ class WidgetCategory extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return SizedBox(
-      height: size.height * .14,
+      height: size.height * .17,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

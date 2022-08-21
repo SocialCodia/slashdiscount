@@ -19,6 +19,8 @@ class VendorController extends GetxController{
   late Vendor vendor;
   late BitmapDescriptor mapMarkerIcon;
 
+  GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
+
   Barcode? barcode;
   QRViewController? qrViewController;
 

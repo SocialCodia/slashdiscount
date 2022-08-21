@@ -8,8 +8,9 @@ class SearchHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
     return Container(
-      height: 90,
+      height: size.height * .09,
       width: double.infinity,
       decoration: const BoxDecoration(
           color: MyColor.primaryColor,

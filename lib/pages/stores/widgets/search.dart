@@ -8,9 +8,10 @@ class WidgetSearch extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
     return SearchHeader(
       child: Container(
-        margin: const EdgeInsets.only(right: 20,left: 16,top: 20),
+        margin: const EdgeInsets.only(right: 20,left: 16,top: 0),
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(50),

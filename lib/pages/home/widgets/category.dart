@@ -15,9 +15,10 @@ class WidgetCategory extends StatelessWidget {
 
     final Size size = MediaQuery.of(context).size;
     return SizedBox(
-      height: size.height * .14,
+      height: size.height * .17,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const MyTitle(title: "Categories"),
           Expanded(

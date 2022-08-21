@@ -6,6 +6,7 @@ import 'package:slashdiscount/pages/home/home.dart';
 import 'package:slashdiscount/pages/login/login.dart';
 import 'package:slashdiscount/pages/offer/offer.dart';
 import 'package:slashdiscount/pages/onboarding/on_boarding.dart';
+import 'package:slashdiscount/pages/payment/payment.dart';
 import 'package:slashdiscount/pages/splash/splash.dart';
 import 'package:slashdiscount/pages/stores/store.dart';
 
@@ -21,6 +22,7 @@ class Routes{
   static String historyRoute = '/history';
   static String offerRoute = '/offer';
   static String scannerRoute = '/scanner';
+  static String paymentRoute = '/scanner';
 
 
   static final routes = [
@@ -33,6 +35,7 @@ class Routes{
     GetPage(name: historyRoute, page: ()=> const HistoryPage()),
     GetPage(name: offerRoute, page: ()=> const OfferPage()),
     GetPage(name: scannerRoute, page: ()=> ScannerPage()),
+    GetPage(name: paymentRoute, page: ()=> PaymentPage()),
   ];
 
 }

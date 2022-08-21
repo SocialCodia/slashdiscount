@@ -39,7 +39,7 @@ class WidgetDiscountItem extends StatelessWidget {
     return Container(
         alignment: Alignment.center,
         width: size.width * 0.3,
-        height: 110,
+        height: size.height * .150,
         decoration: BoxDecoration(
             color: MyColor.primaryColor,
             borderRadius: BorderRadius.circular(15),
@@ -69,7 +69,7 @@ class WidgetDiscountItem extends StatelessWidget {
             ),
             Text(
               title.toString(),
-              style: const TextStyle(fontSize: 17, color: MyColor.secondaryColor),
+              style: const TextStyle(fontSize: 15, color: MyColor.secondaryColor),
             ),
             const SizedBox(
               height: 5,

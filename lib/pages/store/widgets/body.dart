@@ -14,24 +14,26 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Background(
-      banner: vendor.banner.toString(),
-      child: Column(
-          children: [
-            WidgetShopInfo(vendor: vendor),
-            const SizedBox(
-              height: 15,
-            ),
-            WidgetDiscount(vendor: vendor,),
-            const SizedBox(
-              height: 15,
-            ),
-            WidgetAddress(),
-            const SizedBox(
-              height: 15,
-            ),
-            WidgetTerms(minAmount: vendor.minimumAmount.toString(),)
-      ]),
+    return SingleChildScrollView(
+      child: Background(
+        banner: vendor.banner.toString(),
+        child: Column(
+            children: [
+              WidgetShopInfo(vendor: vendor),
+              const SizedBox(
+                height: 15,
+              ),
+              WidgetDiscount(vendor: vendor,),
+              const SizedBox(
+                height: 15,
+              ),
+              WidgetAddress(),
+              const SizedBox(
+                height: 15,
+              ),
+              WidgetTerms(minAmount: vendor.minimumAmount.toString(),)
+        ]),
+      ),
     );
   }
 }
