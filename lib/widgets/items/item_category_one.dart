@@ -19,6 +19,7 @@ class ItemCategoryOne extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
     return Column(
       children: [
         InkWell(
@@ -26,8 +27,8 @@ class ItemCategoryOne extends StatelessWidget {
             vendorController.sendToStore(category: title);
           },
           child: Container(
-              height: 65,
-              width: 65,
+              height: size.height * .08,
+              width: size.height * .08,
               padding: const EdgeInsets.all(10),
               margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
               decoration: BoxDecoration(
@@ -43,8 +44,8 @@ class ItemCategoryOne extends StatelessWidget {
                   ]),
               child: Image.asset(image)),
         ),
-        const SizedBox(
-          height:5,
+        SizedBox(
+          height: size.height * .01,
         ),
         Text(
           title,

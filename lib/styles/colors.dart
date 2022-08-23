@@ -6,4 +6,5 @@ class MyColor{
   static const Color disabledColor = Colors.grey;
   static const Color shimmerBaseColor = Colors.grey;
   static const Color shimmerHighlightColor = Colors.grey;
+  static const Color placeHolderColor = Colors.grey;
 }

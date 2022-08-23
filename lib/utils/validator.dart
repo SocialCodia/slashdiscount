@@ -1,4 +1,6 @@
 
+import 'package:get/get_utils/src/get_utils/get_utils.dart';
+
 class Validator{
 
   static String? verifyOtp(String? value)
@@ -16,5 +18,10 @@ class Validator{
     return value!.isEmpty ? 'Enter Mobile Number' : value.length !=10 ? 'Invalid Mobile Number' : value.length > 13 ? 'Invalid Mobile Number' : null;
   }
 
+
+  static String? validateEmail(String? value)
+  {
+    return value!.isEmpty? 'Enter Email' : !GetUtils.isEmail(value) ? 'Enter Valid Email' : null;
+  }
 
 }

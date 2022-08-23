@@ -39,6 +39,12 @@ class SpHandler{
 
   static logoutUser() async => await instance.clear();
 
+  static String getUserName() => instance.getString(Constants.userName) ?? 'Guest';
+
+  static String getUserEmail() => instance.getString(Constants.userEmail) ?? 'guest@example.com';
+
+  static String getUserMobile() => instance.getString(Constants.userMobile) ?? '9867503256';
+
   static bool isLoggedIn() => instance.get(Constants.userNumber) != null;
 
 }

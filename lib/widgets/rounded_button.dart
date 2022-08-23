@@ -7,8 +7,9 @@ import '../controllers/widget_controller.dart';
 class RoundedButton extends StatelessWidget {
   final String text;
   final VoidCallback onPress;
+  final double textSize;
 
-  RoundedButton({Key? key, required this.text, required this.onPress})
+  RoundedButton({Key? key, required this.text, required this.onPress,this.textSize = 17})
       : super(key: key);
 
   final WidgetController widgetController = Get.find<WidgetController>();
@@ -34,8 +35,8 @@ class RoundedButton extends StatelessWidget {
               ? const CircularProgressIndicator(color: MyColor.secondaryColor,)
               : Text(
             text,
-            style: const TextStyle(
-                fontWeight: FontWeight.bold, color: Colors.white),
+            style: TextStyle(
+                fontWeight: FontWeight.bold, color: Colors.white,fontSize: textSize),
           ),
         ),
       ),

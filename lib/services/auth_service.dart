@@ -6,9 +6,11 @@ import 'api_service.dart';
 
 class AuthService{
 
-  static Future<ResponseUser> getHomeSliders({mobile,otp}) async {
+  static Future<ResponseUser> userLogin({mobile,otp}) async {
     final _response = await ApiService.postRequest({'method':ApiMethods.getLoginMethod,'mobile':mobile,'otp':otp});
     return responseUserFromJson(_response);
   }
+
+
 
 }

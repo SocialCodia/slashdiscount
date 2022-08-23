@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(
           elevation: 0,
           backgroundColor: MyColor.primaryColor,
-          centerTitle: true
+          centerTitle: true,
         )
       ),
       initialBinding: GlobalBinding(),

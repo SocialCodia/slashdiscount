@@ -7,6 +7,7 @@ class RoundedInputField extends StatelessWidget {
   final TextEditingController controller;
   final IconData icon;
   final TextInputType keyboardType;
+  final bool isEnabled;
   final String? Function(String?) validator;
   RoundedInputField(
       {Key? key,
@@ -14,6 +15,7 @@ class RoundedInputField extends StatelessWidget {
         required this.controller,
         required this.icon,
         required this.validator,
+        this.isEnabled = true,
         this.counter = '',
         this.keyboardType = TextInputType.text
       })
@@ -33,7 +35,7 @@ class RoundedInputField extends StatelessWidget {
         keyboardType: keyboardType,
         validator:validator,
         controller: controller,
-        enabled: !widgetController.isButtonProcessing.value,
+        enabled: !widgetController.isButtonProcessing.value || isEnabled,
         decoration: InputDecoration(
             hintText: hintText,
             labelText: hintText,

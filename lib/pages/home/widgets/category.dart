@@ -15,7 +15,7 @@ class WidgetCategory extends StatelessWidget {
 
     final Size size = MediaQuery.of(context).size;
     return SizedBox(
-      height: size.height * .17,
+      height: size.height * .16,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -27,7 +27,7 @@ class WidgetCategory extends StatelessWidget {
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context,index){
-                  return ItemCategoryOne(title: homeController.categoryNames[index], image: Constants.pathIcons+homeController.categoryIcon[index],);
+                  return Center(child: ItemCategoryOne(title: homeController.categoryNames[index], image: Constants.pathIcons+homeController.categoryIcon[index],));
                 }),
           )
         ],

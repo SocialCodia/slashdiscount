@@ -12,6 +12,7 @@ class LoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
     return Form(
       key: authController.loginFormKey,
       child: Column(
@@ -20,8 +21,8 @@ class LoginForm extends StatelessWidget {
         children: [
           Image.asset(
             "assets/images/icons/login.png",
-            height: 200,
-            width: 200,
+            height: size.height * .3,
+            width: size.width * .8,
           ),
           const SizedBox(
             height: 20,
@@ -30,7 +31,17 @@ class LoginForm extends StatelessWidget {
             "Enter your phone Number",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
           ),
-          const Text("We will send you 6 digit verification code"),
+          const Padding(
+            padding:  EdgeInsets.all(12),
+            child:  Text(
+              "We will send you 6 digit verification code",
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 20,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
           const SizedBox(
             height: 20,
           ),
@@ -40,7 +51,6 @@ class LoginForm extends StatelessWidget {
             icon: Icons.call,
             validator: Validator.validateMobile,
             keyboardType: TextInputType.phone,
-            counter: '10',
           ),
           const SizedBox(
             height: 20,
