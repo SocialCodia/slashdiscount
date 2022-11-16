@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:slashdiscount/controllers/auth_controller.dart';
+import 'package:slashdiscount/pages/payment/payment.dart';
 import 'package:slashdiscount/styles/colors.dart';
 import 'package:slashdiscount/utils/constants.dart';
 
@@ -57,7 +58,8 @@ class MyDrawer extends StatelessWidget {
             leading: Icon(Icons.info,color: MyColor.primaryColor),
             title: Text("About Us",style: TextStyle(color: MyColor.primaryColor)),
           ),
-          const ListTile(
+          ListTile(
+            onTap: ()=> Get.to(()=>PaymentPage()),
             leading: Icon(Icons.call,color: MyColor.primaryColor),
             title: Text("Contact Us",style: TextStyle(color: MyColor.primaryColor)),
           ),

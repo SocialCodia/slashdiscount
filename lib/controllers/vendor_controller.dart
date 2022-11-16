@@ -105,7 +105,7 @@ class VendorController extends GetxController {
   void onMapCreated(GoogleMapController controller) {
     mapMarker.add(Marker(
         markerId: const MarkerId("01"),
-        position: LatLng(19.1702813, 73.025802),
+        position: const LatLng(19.1702813, 73.025802),
         icon: mapMarkerIcon));
     update();
   }
