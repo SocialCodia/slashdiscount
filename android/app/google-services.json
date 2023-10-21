@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "916711910541",
+    "project_id": "slashdiscount-app",
+    "storage_bucket": "slashdiscount-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:916711910541:android:81c3ed5ec3c5de99a486c4",
+        "android_client_info": {
+          "package_name": "com.slash.discount.slashdiscount"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "916711910541-5aq2kiktqop3jnq6vanlrc6ahuia72bv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpwonFCsz2micnNEiGY95dnoox6_J9nm4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "916711910541-5aq2kiktqop3jnq6vanlrc6ahuia72bv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
